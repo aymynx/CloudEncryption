@@ -3,7 +3,7 @@ Encryption Based Cloud Storage
 
 ![home page](https://imgur.com/9DL3E9C.png)
 ![login page](https://i.imgur.com/NLHo1B8.png)
-![index page]([http://url/to/img.png](https://i.imgur.com/nbeRcvh.png))
+![index page](https://i.imgur.com/nbeRcvh.png)
 
 ## Requirements (Nuggets)
 ```cs
