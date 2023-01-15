@@ -1,8 +1,8 @@
 # CloudEncryption
 Encryption Based Cloud Storage
 
-<img src="https://i.imgur.com/NLHo1B8.png" \>
-<img src="https://i.imgur.com/nbeRcvh.png" \>
+https://i.imgur.com/NLHo1B8.png
+https://i.imgur.com/nbeRcvh.png
 
 ## Requirements (Nuggets)
 ```cs
