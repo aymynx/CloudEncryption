@@ -6,7 +6,7 @@ Encryption Based Cloud Storage
 System.Data.SQLite
 GleamTech.FileUltimate
 Microsoft.AspNetCore.Http
-using Microsoft.JSInterop
+Microsoft.JSInterop
 Microsoft.AspNetCore.Session
 Microsoft.AspNetCore.WebApi.Client (Recommended)
 ```
