@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>284b1b81-9c8f-4b88-a0e3-1461eb96071c</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\js\NewFolder\**" />
+    <Content Remove="wwwroot\js\NewFolder\**" />
+    <EmbeddedResource Remove="wwwroot\js\NewFolder\**" />
+    <None Remove="wwwroot\js\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="wwwroot\assets\.sass-cache\06fe8c8b3bf916ad0341728e5a244bca259bd186\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\06fe8c8b3bf916ad0341728e5a244bca259bd186\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\14750c82c603aaf8a588951babd3e9a982056e38\basic-setup.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\17621fa82954a944c6d3d8d473d30b0d003f34b0\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\17621fa82954a944c6d3d8d473d30b0d003f34b0\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\215a4aa2cf41a889e3ce4ed3afaa0f6f45d6e24c\basic-setup.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\313b3c56956a294b370f9dfffc57396f000c0767\footer.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\313b3c56956a294b370f9dfffc57396f000c0767\header.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\313b3c56956a294b370f9dfffc57396f000c0767\section.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\313b3c56956a294b370f9dfffc57396f000c0767\slider.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\9158c7d7f099cd0859a1a6979ec1a02fe35642b1\footer.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\9158c7d7f099cd0859a1a6979ec1a02fe35642b1\header.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\9158c7d7f099cd0859a1a6979ec1a02fe35642b1\section.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\9158c7d7f099cd0859a1a6979ec1a02fe35642b1\slider.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\b661fe356a9a40e13596c3c6b7be98b88d05952d\basic-setup.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\ce98142de4c41933f3d8ed0d635fed42a41965f3\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\ce98142de4c41933f3d8ed0d635fed42a41965f3\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\d48ef8a9b3894d4ea31037668627ebf0c28045f0\footer.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\d48ef8a9b3894d4ea31037668627ebf0c28045f0\header.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\d48ef8a9b3894d4ea31037668627ebf0c28045f0\section.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\d48ef8a9b3894d4ea31037668627ebf0c28045f0\slider.scssc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GleamTech.FileUltimate" Version="8.5.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.116" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Data\" />
+  </ItemGroup>
+
+</Project>

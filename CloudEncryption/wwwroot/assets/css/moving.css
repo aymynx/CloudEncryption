@@ -1,0 +1,29 @@
+﻿.moving-image {
+    animation: move 20s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(20px, -20px);
+    }
+
+    40% {
+        transform: translate(-20px, 20px);
+    }
+
+    65% {
+        transform: translate(20px, 20px);
+    }
+
+    80% {
+        transform: translate(-20px, -20px);
+    }
+    100% {
+        transform: translate(-20px, 0px);
+    }
+}

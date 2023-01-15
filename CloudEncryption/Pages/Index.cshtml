@@ -1,0 +1,41 @@
+﻿@page "/Index"
+@model IndexModel
+@using Microsoft.JSInterop;
+@inject IJSRuntime _jsRuntime
+@{
+    ViewData["Title"] = "Quick Upload";
+}
+@using Microsoft.AspNetCore.Http;
+
+<script src="~/js/myscripts/notif.js"></script>
+
+<!---      Encryption Part      --->
+<div class="text-center">
+
+    @if (HttpContext.Session.GetString("userAuthenticated") != "true")
+    {
+        <h1 class="display-4">Quick Upload To Space</h1>
+    }
+    else
+    {
+        <h1 class="display-4">@HttpContext.Session.GetString("username")'s space</h1>
+    }
+
+</div>
+<div class="container">
+    <div class="mb-3 mt-3">
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label">Upload File</label>
+                <input type="file" name="file" class="form-control" />
+                <label class="form-label">Enter key</label>
+                <input type="text" name="user_defined_key" class="form-control" />
+                <label class="form-label">Encrypt ? </label>
+                <input type="checkbox" name="to_encrypt" value="true" class="custom-checkbox" />
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Upload To Space</button>
+            </div>
+        </form>
+    </div>
+</div>

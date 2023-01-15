@@ -1,0 +1,44 @@
+﻿@page "/MySpaceGUI"
+@model MySpaceGUIModel
+@{
+    ViewData["Title"] = "My Space GUI";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+@using GleamTech.AspNet.Core
+@using GleamTech.FileUltimate.AspNet.UI
+@using Microsoft.AspNetCore.Http; 
+
+<!DOCTYPE html>
+@{
+    var fileManager = new FileManager
+    {
+        Width = 1300,
+        Height = 530,
+        Resizable = false
+    };
+
+    var rootFolder = new FileManagerRootFolder
+    {
+        Name = HttpContext.Session.GetString("username") + "'s Space",
+        Location = HttpContext.Session.GetString("user_space")
+    };
+
+    rootFolder.AccessControls.Add(new FileManagerAccessControl
+    {
+        Path = @"\",
+        AllowedPermissions = FileManagerPermissions.Full
+    });
+
+    fileManager.RootFolders.Add(rootFolder);
+}
+<html>
+<head>
+    <title>File Manager</title>
+    @this.RenderHead(fileManager)
+</head>
+<body>
+    @this.RenderBody(fileManager)
+</body>
+</html>

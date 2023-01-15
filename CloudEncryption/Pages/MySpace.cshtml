@@ -1,0 +1,40 @@
+﻿@page "/MySpace"
+@model MySpaceModel
+@{
+    ViewData["Title"] = "My Space";
+    @using CloudEncryption.FileHandling;
+    @using Microsoft.AspNetCore.Http;
+    @using System.IO;
+    if (HttpContext.Session.GetString("current_dir") == "")
+    {
+        HttpContext.Session.SetString("current_dir", HttpContext.Session.GetString("user_space"));
+    }
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<!---    All Files Tables    -->
+
+
+<div id="table-responsive">
+    <table class="table table-responsive table-bordered">
+        <form method="POST">
+        <tr>
+            <th>Current Directory Files</th>
+            <th>Controls</th>
+        </tr>
+
+        @foreach (string file in LocalFileHandler.GetUserSpaceFiles(HttpContext.Session.GetString("current_dir")))
+        {
+            <tr>
+                <td>@System.IO.Path.GetFileName(System.IO.Path.GetDirectoryName(file))<a> > </a>@file.Split('\\').Last()</td>
+                <td><button asp-page-handler="DownloadFile" asp-route-filePath="@file">Download</button>
+                <button asp-page-handler="EncryptFile" asp-route-filePath="@file">Encrypt</button>
+                <button asp-page-handler="DecryptFile" asp-route-filePath="@file">Decrypt</button>
+                <input type="text" name="user_defined_key" class="form-text" placeholder="Your key"/>
+                <button asp-page-handler="DeleteFile" asp-route-filePath="@file">Delete (Permanent)</button></td>
+            </tr>
+        }
+        </form>
+    </table>
+</div>
